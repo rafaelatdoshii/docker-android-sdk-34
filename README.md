@@ -12,9 +12,9 @@ Docker image for running Android projects in your pipeline
 - Ubuntu 23.10
 - OpenJDK 17
 
-# Building the image
+## Building the image
 
 ```
-docker build .
+docker build -t docker-android-sdk-34 .
 ```
 
