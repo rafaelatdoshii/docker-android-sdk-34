@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 ubuntu:23.10
+FROM --platform=linux/amd64 ubuntu:24.04
 
 
 ENV ANDROID_SDK_HOME /opt/android-sdk-linux
@@ -13,10 +13,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN dpkg --add-architecture i386
 
-RUN rm -rf /var/lib/apt/lists/*
-RUN rm -rf /etc/apt/sources.list.d/*
-RUN apt-get update -yqq
-RUN apt-get install -y \
+RUN apt-get update -yqq && apt-get install -y \
   curl \
   expect \
   git \
